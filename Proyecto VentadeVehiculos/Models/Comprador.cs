@@ -15,6 +15,8 @@ namespace Proyecto_VentadeVehiculos.Models
         public string correo { get; set; }
         [DataType(DataType.Date)]
         public DateOnly fechanacimiento { get; set; }
+        public virtual ICollection<Transaccion> Transacciones { get; set; }
+
     }
 
 }

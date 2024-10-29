@@ -24,6 +24,8 @@ namespace Proyecto_VentadeVehiculos.Models
         public string TipoCombustible { get; set; }
         [Required]
         public string Ubicacion { get; set; }
+        public virtual ICollection<Transaccion> Transacciones { get; set; }
+
     }
 
 }
