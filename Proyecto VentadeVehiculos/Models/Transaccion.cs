@@ -12,17 +12,17 @@ namespace Proyecto_VentadeVehiculos.Models
         [Required]
         [ForeignKey("Vendedor")]
         public int IdVendedor { get; set; }
-        public virtual Vendedor Vendedor { get; set; }
+        public Vendedor? Vendedor { get; set; }
 
         [Required]
         [ForeignKey("Comprador")]
         public int IdComprador { get; set; }
-        public virtual Comprador Comprador { get; set; }
+        public  Comprador? Comprador { get; set; }
 
         [Required]
         [ForeignKey("Vehiculo")]
         public int IdVehiculo { get; set; }
-        public virtual Vehiculo Vehiculo { get; set; }
+        public  Vehiculo? Vehiculo { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
