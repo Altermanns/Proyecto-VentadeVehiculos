@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Proyecto_VentadeVehiculos.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Proyecto_VentadeVehiculosContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Proyecto_VentadeVehiculosContext") ?? throw new InvalidOperationException("Connection string 'Proyecto_VentadeVehiculosContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

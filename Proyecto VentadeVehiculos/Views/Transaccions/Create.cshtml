@@ -1,0 +1,50 @@
+﻿@model Proyecto_VentadeVehiculos.Models.Transaccion
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Transaccion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdVendedor" class="control-label"></label>
+                <select asp-for="IdVendedor" class ="form-control" asp-items="ViewBag.IdVendedor"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdComprador" class="control-label"></label>
+                <select asp-for="IdComprador" class ="form-control" asp-items="ViewBag.IdComprador"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdVehiculo" class="control-label"></label>
+                <select asp-for="IdVehiculo" class ="form-control" asp-items="ViewBag.IdVehiculo"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaTransaccion" class="control-label"></label>
+                <input asp-for="FechaTransaccion" class="form-control" />
+                <span asp-validation-for="FechaTransaccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioFinal" class="control-label"></label>
+                <input asp-for="PrecioFinal" class="form-control" />
+                <span asp-validation-for="PrecioFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
