@@ -26,19 +26,6 @@ body {
     color: #333333; 
 }
 
-h1 {
-    color: #ff5733; 
-}
-
-
-a {
-    color: #007bff; 
-}
-
-    a:hover {
-        color: #0056b3; 
-    }
-
 section {
     display: flex;
     width: 600px;
